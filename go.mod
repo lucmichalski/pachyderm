@@ -20,7 +20,7 @@ require (
 	github.com/coreos/go-oidc v2.2.1+incompatible
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f
 	github.com/crewjam/saml v0.0.0-20190521120225-344d075952c9
-	github.com/dexidp/dex v0.0.0-20200927222247-f3fc0c539543 // indirect
+	github.com/dexidp/dex v0.0.0-20201118094123-6ca0cbc85759 // indirect
 	github.com/dlclark/regexp2 v1.2.0 // indirect
 	github.com/docker/go-units v0.4.0
 	github.com/docker/spdystream v0.0.0-20181023171402-6480d4af844c // indirect
@@ -56,6 +56,7 @@ require (
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/lib/pq v1.3.0
 	github.com/lunixbochs/vtclean v1.0.0 // indirect
+	github.com/mattn/go-sqlite3 v2.0.3+incompatible // indirect
 	github.com/mattn/go-tty v0.0.3 // indirect
 	github.com/minio/minio-go v6.0.14+incompatible
 	github.com/onsi/gomega v1.8.1 // indirect
@@ -120,3 +121,5 @@ replace github.com/Azure/go-autorest => github.com/Azure/go-autorest v13.3.2+inc
 replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
 
 replace k8s.io/client-go => k8s.io/client-go v0.0.0-20190718183610-8e956561bbf5
+
+replace github.com/dexidp/dex => github.com/pachyderm/dex v0.0.0-20201118163231-aa20083dfa7f
