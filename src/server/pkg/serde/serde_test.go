@@ -115,6 +115,20 @@ func TestEncodeOptions(t *testing.T) {
 	require.Equal(t, string(expected), buf.String())
 }
 
-// TODO(msteffen) add proto tests
+func TestDecodeCronYaml(t *testing.T) {
+	cronYaml := `
+    input:
+      cron:
+        name: tick_test
+        spec: "*/1 * * * *"
+        overwrite: true`
+
+	var buf bytes.Buffer
+	e := NewYAMLEncoder(&buf, WithIndent(3)) // unusual indent, to demo option
+	require.NoError(t, e.Encode(data))
+	expected := []byte("F:\n   A: first\n   B: second\n")
+	// don't trim space to ensure leading space is the same
+	require.Equal(t, string(expected), buf.String())
+}
 
 // TODO(msteffen) add proto tests
