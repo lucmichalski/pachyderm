@@ -12567,6 +12567,7 @@ func TestCrashingToStandby(t *testing.T) {
 	if os.Getenv("RUN_BAD_TESTS") == "" {
 		t.Skip("Skipping because RUN_BAD_TESTS was empty")
 	}
+	t.Fatalf("RUN_BAD_TESTS contains: %q", os.Getenv("RUN_BAD_TESTS"))
 
 	if testing.Short() {
 		t.Skip("Skipping integration tests in short mode")
